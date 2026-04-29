@@ -1,0 +1,15 @@
+#!/usr/bin/env zsh
+# lookup
+
+# Regular expression search on hunspell's dictionaries.
+
+if [[ $1 == "--help" || $1 == "-h" ]]
+then
+    echo "lookup
+
+Regular expression search on hunspell's dictionaries.
+
+Usage: lookup <regex>"
+fi
+
+cat "$WORDS" | grep -Ei "$1"

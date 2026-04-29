@@ -1,0 +1,24 @@
+#!/usr/bin/env zsh
+# dict
+
+# Dictionary retrieval.
+
+if [[ $1 == "--help" || $1 == "-h" ]]
+then
+    echo -e "dict
+
+Dictionary word retrieval.
+
+Usage: dict | grep \"word\"
+       dict > en_US.dic
+
+This function literally just \`cat\`s the file. Use \033[48;2;255;205;0mlookup\033[0m if you want to search it with a regexp."
+    echo "lookup
+
+Regular expression search on hunspell's dictionaries.
+
+Usage: lookup <regex>"
+fi
+
+cat "$WORDS"
+}
